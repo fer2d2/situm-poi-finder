@@ -36,7 +36,7 @@ export function POIForm({ onSubmit, isLoading }: POIFormProps) {
     defaultValues: {
       email: credentials.email,
       apiKey: credentials.apiKey,
-      buildingId: "",
+      buildingId: 0,
     },
   });
 
