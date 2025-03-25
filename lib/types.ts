@@ -15,6 +15,16 @@ export interface Position {
   };
 }
 
+export interface CustomField {
+  id: number;
+  name: string;
+  value: string | number | boolean | null;
+  type: 'text' | 'number' | 'boolean' | 'date';
+  required: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
 export interface Category {
   id: number;
   name: string;
@@ -26,7 +36,7 @@ export interface Category {
   created_at: string;
   updated_at: string;
   parent_poi_category_id: number | null;
-  custom_fields: any[];
+  custom_fields: CustomField[];
   public: boolean;
 }
 
@@ -39,7 +49,7 @@ export interface POI {
   building_id: number;
   name: string;
   info: string;
-  custom_fields: any[];
+  custom_fields: CustomField[];
   category_id: number;
   categories: Category[];
   icon: string | null;
